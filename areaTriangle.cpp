@@ -8,7 +8,7 @@
 
 void CalcArea(float base, float height) {
     float area = base * height / 2.0;
-    std::cout << "The area of the triangle is: " << area << std::endl;
+    std::cout << "The area of the triangle is: " << area << "cm" << std::endl;
 }
 
 int main() {
@@ -16,17 +16,17 @@ int main() {
     std::string heightInputStr;
 
     // Ask the user for height as a string
-    std::cout << "Enter the height of the triangle: ";
+    std::cout << "Enter the height of the triangle(cm): ";
     std::cin >> heightInputStr;
     // Ask the user for base as a string
-    std::cout << "Enter the base of the triangle: ";
+    std::cout << "Enter the base of the triangle(cm): ";
     std::cin >> baseInputStr;
 
     try {
         // Convert the user height to a float
-        heightInput = std::stof(heightInputStr);
+        float heightInput = std::stof(heightInputStr);
         // Convert the user base to a float
-        baseInput = std::stof(baseInputStr);
+        float baseInput = std::stof(baseInputStr);
 
         if (baseInput <= 0 && heightInput <= 0) {
             /*if base is less than 0 and height is less than 0,
